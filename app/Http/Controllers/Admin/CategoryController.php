@@ -39,7 +39,7 @@ class CategoryController extends Controller
         $category->meta_keywords = $request->input('meta_keywords');
         $category->meta_descrip = $request->input('meta_description');
         $category->save();
-        return redirect('/dashboard')->with('status', 'Category add successfully');
+        return redirect('categories')->with('status', 'Category add successfully');
     }
 
     public function edit($id)
@@ -73,7 +73,7 @@ class CategoryController extends Controller
         $category->meta_keywords = $request->input('meta_keywords');
         $category->meta_descrip = $request->input('meta_description');
         $category->update();
-        return redirect('dashboard')->with('status', 'Category update successfully');
+        return redirect('categories')->with('status', 'Category update successfully');
     }
 
     public function destroy($id)
