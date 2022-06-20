@@ -23,6 +23,7 @@ use Illuminate\Support\Facades\Route;
 // });
 Route::get('/',[FrontendFrontendController::class, 'index']);
 Route::get('category', [FrontendFrontendController::class, 'category']);
+Route::get('view-category/{slug}', [FrontendFrontendController::class, 'viewcategory']);
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
